@@ -5,21 +5,21 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreWorkflow", "PreWorkflow\PreWorkflow.csproj", "{BDAD0F1A-6854-4C40-AAA0-876C9E0372A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_PreBatch", "1_PreBatch\1_PreBatch.csproj", "{7383B000-B2B0-48E3-BE7A-077A6512745F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreBatch", "PreBatch\PreBatch.csproj", "{7383B000-B2B0-48E3-BE7A-077A6512745F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDWorkflow", "TDDWorkflow\TDDWorkflow.csproj", "{B831B583-CE0C-4B7C-80C0-A127AC65B215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_TDDBatch", "2_TDDBatch\2_TDDBatch.csproj", "{ED022EE3-FAB4-438E-A4A4-D01C6DDFD348}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDBatch", "TDDBatch\TDDBatch.csproj", "{ED022EE3-FAB4-438E-A4A4-D01C6DDFD348}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_Validator", "5_Validator\5_Validator.csproj", "{F11BD3CE-47C5-49DA-970E-CF8D4DA333F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validator", "Validator\Validator.csproj", "{F11BD3CE-47C5-49DA-970E-CF8D4DA333F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDepthVideo", "RemoveDepthVideo\RemoveDepthVideo.csproj", "{2ABD4130-980C-4028-ACB8-4D1F8772A89E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_PcaGmmGenerator", "3_PcaGmmGenerator\3_PcaGmmGenerator.csproj", "{BE5D5D44-6FAA-4A81-A585-4E0018EDED9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PcaGmmGenerator", "PcaGmmGenerator\PcaGmmGenerator.csproj", "{BE5D5D44-6FAA-4A81-A585-4E0018EDED9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVWorkflow", "FVWorkflow\FVWorkflow.csproj", "{B5D01ADB-2492-4C53-B1D7-1332A7C886A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_FVBatch", "4_FVBatch\4_FVBatch.csproj", "{F47AC46A-2C82-49F9-92D0-C2DB13192326}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVBatch", "FVBatch\FVBatch.csproj", "{F47AC46A-2C82-49F9-92D0-C2DB13192326}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDWorkflowHelper", "TDDWorkflowHelper\TDDWorkflowHelper.csproj", "{C7425454-2ED7-4606-BE0D-A67CDFDC799B}"
 EndProject
