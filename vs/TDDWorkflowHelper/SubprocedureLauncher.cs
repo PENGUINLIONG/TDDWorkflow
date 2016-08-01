@@ -10,7 +10,7 @@ namespace LiongStudio.ComputerVision.Utils
 	public static class SubprocedureLauncher
 	{
 		/// <summary>
-		/// Lauch a subprocedure with no promt window.
+		/// Lauch a subprocedure with no prompt window.
 		/// </summary>
 		/// <param name="subprocedure">Path to the executable to be launched.</param>
 		/// <param name="args">Arguments to be passed.</param>

@@ -9,6 +9,13 @@ namespace LiongStudio.ComputerVision.Utils
 {
 	public static class FileLocator
 	{
+		/// <summary>
+		/// Find all '.avi' files recursively in <paramref name="searchRoot"/>.
+		/// </summary>
+		/// <param name="searchRoot">The root directory that will be searched.</param>
+		/// <param name="depth">the maximum depth of recursion</param>
+		/// <param name="shouldQuoteResult">Determines if output string should be parsed by quote '\"'</param>
+		/// <returns>All '.avi' files found in <paramref name="searchRoot"/> in <paramref name="depth"/> recursionat most.</returns>
 		public static List<string> FindAllAvi(string searchRoot, int depth, bool shouldQuoteResult = true)
 		{
 			if (depth < 0) throw new ArgumentOutOfRangeException("$depth is negative.");
