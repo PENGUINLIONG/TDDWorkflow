@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3492728716" file="P:\TDDWorkflow\matlab\TddMatlabHelper.prj" location="P:\TDDWorkflow\matlab" name="TddMatlabHelper" preferred-package-location="P:\TDDWorkflow\matlab\TddMatlabHelper\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.library" target-name="Library Compiler">
+  <configuration build-checksum="3757233095" file="P:\TDDWorkflow\matlab\TddMatlabHelper.prj" location="P:\TDDWorkflow\matlab" name="TddMatlabHelper" preferred-package-location="P:\TDDWorkflow\matlab\TddMatlabHelper\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.library" target-name="Library Compiler">
     <param.appname>TddMatlabHelper</param.appname>
     <param.icon />
     <param.icons />
@@ -129,6 +129,7 @@
       <file>P:\caffe\Build\x64\Release\matcaffe\+caffe\set_device.m</file>
       <file>P:\caffe\Build\x64\Release\matcaffe\+caffe\set_mode_gpu.m</file>
       <file>${PROJECT_ROOT}\FeatureMapNormalization.m</file>
+      <file>${PROJECT_ROOT}\import_idt.m</file>
       <file>${PROJECT_ROOT}\SpatialCNNFeature.m</file>
       <file>${PROJECT_ROOT}\TemporalCNNFeature.m</file>
       <file>P:\toolbox\classify\pca.m</file>

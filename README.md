@@ -1,5 +1,6 @@
 # TDDWorkflow
 [![License](https://img.shields.io/badge/license-BSD-blue.svg)](LICENSE)
+
 This repo is a workflow project which helps you extract TDD features from videos on Windows.
 
 ## TDD features
@@ -9,8 +10,10 @@ See [Wanglimin's TDD repo](https://github.com/wanglimin/TDD) for more informatio
 MATLAB: Please relocate the lib reference in `./vs/TDDWorkflowHelper/TDDWorkflowHelper.csproj`, it should be in line 31.
 
 MATLAB toolboxes: [vlfeat/vlfeat](https://github.com/vlfeat/vlfeat) and [pdollar/toolbox](https://github.com/pdollar/toolbox). Please clone them and add:
+
   * `./toolbox/gmm` & `./toolbox/fisher`, for vlfeat/vlfeat;
   * `./classify`, for pdollar/toolbox;
+
 to your MATLAB search path. (Note that vlfeat need to be compiled, its `.sln` file can be easily found)
 
 .NET Framework: Versions of 4.5+ are recommended.
@@ -31,7 +34,8 @@ OpenCV: OpenCV v2.x is recommended as tests on OpenCV v3.x have not been done ye
 # Install
 If the computer is not the one that compile it, install MCR first.
 Make a copy of compiled `vl.dll` in the same directory as other executables.
-Place downloaded [models](https://github.com/wanglimin/TDD#tdd-demo-code), [`VGG_mean.mat`](https://github.com/wanglimin/TDD/blob/cudnn2.0/VGG_mean.mat), [`flow_mean.mat`](https://github.com/wanglimin/TDD/blob/cudnn2.0/flow_mean.mat), compiled `vl.dll` (from vlfeat), `dense_flow.exe`, `opencv_xxx.dll` and `improved_trajectory.exe` in the same directory as other executables.
+Place downloaded [models(v1)](https://github.com/wanglimin/TDD#two-stream-cnn-models-trained-on-the-ucf101-dataset) in folder `ModelProto` which should be in the same directory as other executables.
+Place downloaded [models(v2)](https://github.com/wanglimin/TDD#tdd-demo-code), [`VGG_mean.mat`](https://github.com/wanglimin/TDD/blob/cudnn2.0/VGG_mean.mat), [`flow_mean.mat`](https://github.com/wanglimin/TDD/blob/cudnn2.0/flow_mean.mat), compiled `vl.dll` (from vlfeat), `dense_flow.exe`, `opencv_xxx.dll` and `improved_trajectory.exe` in the same directory as other executables.
 
 Now TDDWorkflow is ready.
 
