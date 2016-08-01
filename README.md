@@ -21,6 +21,8 @@ dense_flow: Download it [here](https://github.com/wanglimin/dense_flow). Build i
 
 improved_trajectory: Download it [here](https://github.com/wanglimin/improved_trajectory). Build it and rename the output executable `improved_trajectory.exe`.
 
+OpenCV: OpenCV v2.x is recommended as tests on OpenCV v3.x have not been done yet.  
+
 # Build
 1. Clone this repository.
 2. In MATLAB, set current directory to `./matlab`. Open `TddMatlabHelper.prj`. Click 'Package' in the upper-right corner to build helper lib.
@@ -29,7 +31,7 @@ improved_trajectory: Download it [here](https://github.com/wanglimin/improved_tr
 # Install
 If the computer is not the one that compile it, install MCR first.
 Make a copy of compiled `vl.dll` in the same directory as other executables.
-Place downloaded [models](https://github.com/wanglimin/TDD#tdd-demo-code), compiled `vl.dll` (from vlfeat), `dense_flow.exe` and `improved_trajectory.exe` in the same directory as other executables.
+Place downloaded [models](https://github.com/wanglimin/TDD#tdd-demo-code), [`VGG_mean.mat`](https://github.com/wanglimin/TDD/blob/cudnn2.0/VGG_mean.mat), [`flow_mean.mat`](https://github.com/wanglimin/TDD/blob/cudnn2.0/flow_mean.mat), compiled `vl.dll` (from vlfeat), `dense_flow.exe`, `opencv_xxx.dll` and `improved_trajectory.exe` in the same directory as other executables.
 
 Now TDDWorkflow is ready.
 
