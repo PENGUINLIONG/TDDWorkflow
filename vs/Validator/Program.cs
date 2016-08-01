@@ -4,13 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using VideoHelper;
+using LiongStudio.ComputerVision.Tdd;
+using LiongStudio.ComputerVision.Utils;
 
 namespace Validator
 {
 	class Program
 	{
-		static Video _Video;
+		static MatlabDelegate _Matlab;
+		static string[] _SuffixWithNorm = new string[]
+		{
+			"scale3_s_c4_n1", "scale3_s_c4_n2",
+			"scale3_s_c5_n1", "scale3_s_c5_n2",
+			"scale3_t_c3_n1", "scale3_t_c3_n2",
+			"scale3_t_c4_n1", "scale3_t_c4_n2"
+		};
+		static string[] _SuffixWithoutNorm = new string[] { "scale3_s_c4_fv", "scale3_s_c5_fv", "scale3_t_c3_fv", "scale3_t_c4_fv" };
 
 		class CVLogger : IDisposable
 		{
@@ -43,24 +52,13 @@ namespace Validator
 		}
 
 		static CVLogger _Log;
-
-		static List<string> FindAllAvi(string dir, int depth)
-		{
-			List<string> rv = new List<string>();
-			if (depth <= 0) return rv;
-
-			foreach (var file in Directory.GetFiles(dir)) if ((!Path.GetFileName(file).StartsWith("K_")) && Path.GetExtension(file) == ".avi") rv.Add(file);
-			foreach (var subdir in Directory.GetDirectories(dir)) rv.AddRange(FindAllAvi(subdir, depth));
-
-			return rv;
-		}
 		
 		static void CheckDenseFlowImages(string dir, string fileNameNoEx)
 		{
 			var vidPath = dir + '\\' + fileNameNoEx + ".avi";
 			if (!File.Exists(vidPath)) _Log.WriteLine("Failed accessing to file: " + vidPath);
 
-			var count = (_Video.GetVideoFrameCount(vidPath) as MathWorks.MATLAB.NET.Arrays.MWNumericArray).ToScalarInteger();
+			var count = _Matlab.GetVideoFrameCount(vidPath);
 
 			int countI = 0, countX = 0, countY = 0;
 			foreach (var imgPath in Directory.GetFiles(dir + @"\Result")) if (Path.GetExtension(imgPath) == ".jpg") try
@@ -106,85 +104,41 @@ namespace Validator
 		{
 			string tddPrefix = dir + @"\Result\" + fileNameNoEx;
 
-			if (!File.Exists(tddPrefix + "_scale3_s_c4_n1.mat"))
-				_Log.WriteLine("TDD (spatial c4 n1) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_s_c4_n1.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of TDD (spatial c4 n1) seems too short (< 50KB)");
+			foreach (var suffix in _SuffixWithNorm)
+			{
+				var info = new FileInfo(tddPrefix + '_' + suffix + ".mat");
 
-			if (!File.Exists(tddPrefix + "_scale3_s_c4_n2.mat"))
-				_Log.WriteLine("TDD (spatial c4 n2) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_s_c4_n2.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of TDD (spatial c4 n2) seems too short (< 50KB)");
-
-			if (!File.Exists(tddPrefix + "_scale3_s_c5_n1.mat"))
-				_Log.WriteLine("TDD (spatial c5 n1) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_s_c5_n1.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of TDD (spatial c5 n1) seems too short (< 50KB)");
-
-			if (!File.Exists(tddPrefix + "_scale3_s_c5_n2.mat"))
-				_Log.WriteLine("TDD (spatial c5 n2) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_s_c5_n2.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of TDD (spatial c5 n2) seems too short (< 50KB)");
-
-
-
-			if (!File.Exists(tddPrefix + "_scale3_t_c3_n1.mat"))
-				_Log.WriteLine("TDD (temporal c3 n1) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_t_c3_n1.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of TDD (temporal c3 n1) seems too short (< 50KB)");
-
-			if (!File.Exists(tddPrefix + "_scale3_t_c3_n2.mat"))
-				_Log.WriteLine("TDD (temporal c3 n2) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_t_c3_n2.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of TDD (temporal c3 n2) seems too short (< 50KB)");
-
-			if (!File.Exists(tddPrefix + "_scale3_t_c4_n1.mat"))
-				_Log.WriteLine("TDD (temporal c4 n1) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_t_c4_n1.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of TDD (temporal c4 n1) seems too short (< 50KB)");
-
-			if (!File.Exists(tddPrefix + "_scale3_t_c4_n2.mat"))
-				_Log.WriteLine("TDD (temporal c4 n2) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_t_c4_n2.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of TDD (temporal c4 n2) seems too short (< 50KB)");
+				if (!info.Exists)
+					_Log.WriteLine("TDD (" + suffix + ") do not exist.");
+				else if (info.Length < 1024 * 50)
+					_Log.WriteLine("Length of TDD (" + suffix + ") seems too short (< 50KB)");
+			}
 		}
 
 		static void CheckFisherVectors(string dir, string fileNameNoEx)
 		{
-			string tddPrefix = dir + @"\Result\" + fileNameNoEx;
+			string fvPrefix = dir + @"\Result\" + fileNameNoEx;
 
-			if (!File.Exists(tddPrefix + "_scale3_s_c4_fv.mat"))
-				_Log.WriteLine("Fisher Vector (spatial c4) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_s_c4_fv.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of Fisher Vector (spatial c4) seems too short (< 50KB)");
+			foreach (var suffix in _SuffixWithoutNorm)
+			{
+				var info = new FileInfo(fvPrefix + '_' + suffix + ".mat");
 
-			if (!File.Exists(tddPrefix + "_scale3_s_c5_fv.mat"))
-				_Log.WriteLine("Fisher Vector (spatial c5) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_s_c5_fv.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of Fisher Vector (spatial c5) seems too short (< 50KB)");
-
-
-
-			if (!File.Exists(tddPrefix + "_scale3_t_c3_fv.mat"))
-				_Log.WriteLine("Fisher Vector (temporal c3) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_t_c3_fv.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of Fisher Vector (temporal c3) seems too short (< 50KB)");
-
-			if (!File.Exists(tddPrefix + "_scale3_t_c4_fv.mat"))
-				_Log.WriteLine("Fisher Vector (temporal c4) do not exist.");
-			else if (new FileInfo(tddPrefix + "_scale3_t_c4_fv.mat").Length < 1024 * 50)
-				_Log.WriteLine("Length of Fisher Vector (temporal c4) seems too short (< 50KB)");
+				if (!info.Exists)
+					_Log.WriteLine("TDD (" + suffix + ") do not exist.");
+				else if (info.Length < 1024 * 50)
+					_Log.WriteLine("Length of Fisher Vector (" + suffix + ") seems too short (< 50KB)");
+			}
 		}
 
 		static void Main(string[] args)
 		{
-			_Video = new Video();
+			_Matlab = new MatlabDelegate();
 			_Log = new CVLogger();
 
 			foreach (var dir in args)
 			{
 				_Log.WriteLine(">>> Searching in directory: " + dir);
-				foreach (var fileName in FindAllAvi(dir, 5))
+				foreach (var fileName in FileLocator.FindAllAvi(dir, 5))
 				{
 					_Log.WriteLine(">>> Validating the results of file: " + fileName);
 
@@ -205,7 +159,7 @@ namespace Validator
 				Console.WriteLine("Press any key to continue...");
 				Console.ReadKey();
 			}
-			_Video.Dispose();
+			_Matlab.Dispose();
 			_Log.Dispose();
 		}
 	}

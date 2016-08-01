@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FVHelper;
-using MathWorks.MATLAB.NET.Arrays;
+using LiongStudio.ComputerVision.Tdd;
 
 namespace PcaGmmGenerator
 {
 	class Program
 	{
-		static FV _Fv = new FV();
+		static MatlabDelegate _Matlab = new MatlabDelegate();
 		static string[] _Suffix = new string[] { "scale3_s_c4_n1", "scale3_s_c4_n2", "scale3_s_c5_n1", "scale3_s_c5_n2", "scale3_t_c3_n1", "scale3_t_c3_n2", "scale3_t_c4_n1", "scale3_t_c4_n2" };
 		
 		static Random _Rand = new Random();
@@ -74,14 +70,7 @@ namespace PcaGmmGenerator
 
 			foreach (var suffix in _Suffix)
 			{
-				var matList = GetValidMats(list, suffix);
-				int count = matList.Count;
-				MWCellArray carray = new MWCellArray(count, 1);
-				for (int i = 0; i < count; ++i)
-					carray[i + 1] = matList[i];
-
-				_Fv.GeneratePca(carray, suffix, pcaOut);
-				_Fv.GenerateGmm(carray, pcaOut + suffix + ".mat", suffix, gmmOut);
+				_Matlab.GeneratePcaGmm(GetValidMats(list, suffix),suffix, pcaOut, gmmOut);
 			}
 		}
 	}

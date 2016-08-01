@@ -1,0 +1,50 @@
+mcc -W 'dotnet:LiongStudio.ComputerVision.Tdd,Tdd,0.0,private' -T link:lib -d P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing -v 'class{Tdd:P:\TDDWorkflow\matlab\ExtractFisherVector.m,P:\TDDWorkflow\matlab\ExtractTddFeature.m,P:\TDDWorkflow\matlab\GenerateGmm.m,P:\TDDWorkflow\matlab\GeneratePca.m,P:\TDDWorkflow\matlab\GetVideoFrameCount.m}' 
+Compiler version: 6.1 (R2015b)
+
+Dependency analysis by REQUIREMENTS.
+
+[警告: Adding path "P:\TDDWorkflow\matlab" to Compiler path instance.] 
+[] 
+[警告: Adding path "P:\TDDWorkflow\matlab" to Compiler path instance.] 
+[] 
+[警告: 重复的目录名称: P:\TDDWorkflow\matlab] 
+[] 
+[警告: Adding path "P:\TDDWorkflow\matlab" to Compiler path instance.] 
+[] 
+[警告: 重复的目录名称: P:\TDDWorkflow\matlab] 
+[] 
+[警告: Adding path "P:\TDDWorkflow\matlab" to Compiler path instance.] 
+[] 
+[警告: 重复的目录名称: P:\TDDWorkflow\matlab] 
+[] 
+[警告: Adding path "P:\TDDWorkflow\matlab" to Compiler path instance.] 
+[] 
+[警告: 重复的目录名称: P:\TDDWorkflow\matlab] 
+[] 
+Parsing file "P:\TDDWorkflow\matlab\ExtractFisherVector.m"
+	(Referenced from: "Compiler Command Line").
+Parsing file "P:\TDDWorkflow\matlab\ExtractTddFeature.m"
+	(Referenced from: "Compiler Command Line").
+Parsing file "P:\TDDWorkflow\matlab\GenerateGmm.m"
+	(Referenced from: "Compiler Command Line").
+Parsing file "P:\TDDWorkflow\matlab\GeneratePca.m"
+	(Referenced from: "Compiler Command Line").
+Parsing file "P:\TDDWorkflow\matlab\GetVideoFrameCount.m"
+	(Referenced from: "Compiler Command Line").
+Deleting 7 temporary MEX authorization files.
+Removing: 'C:\Users\Liong\AppData\Local\Temp\mathworks_tmp_01aa818585_6824.auth'.
+Removing: 'C:\Users\Liong\AppData\Local\Temp\mathworks_tmp_01aa829153_6824.auth'.
+Removing: 'C:\Users\Liong\AppData\Local\Temp\mathworks_tmp_01aa8960_6824.auth'.
+Removing: 'C:\Users\Liong\AppData\Local\Temp\mathworks_tmp_01aa86577_6824.auth'.
+Removing: 'C:\Users\Liong\AppData\Local\Temp\mathworks_tmp_01aa822304_6824.auth'.
+Removing: 'C:\Users\Liong\AppData\Local\Temp\mathworks_tmp_01aa815167_6824.auth'.
+Removing: 'C:\Users\Liong\AppData\Local\Temp\mathworks_tmp_01aa811018_6824.auth'.
+Generating file "P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\TddNative.cs".
+Generating file "P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\Tdd.cs".
+Generating file "P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\readme.txt".
+Executing command: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /nologo /optimize /doc:"P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\Tdd.xml" /t:library /r:"S:\MATLAB\R2015b\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll" /resource:"P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\Tdd.ctf" /out:"P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\Tdd.dll" "P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\Tdd.cs"Executing command: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /nologo /optimize /doc:"P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\TddNative.xml" /t:library /r:"S:\MATLAB\R2015b\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll" /resource:"P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\Tdd.ctf" /out:"P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\TddNative.dll" "P:\TDDWorkflow\matlab\TddMatlabHelper\for_testing\TddNative.cs"
+正在打包...
+Creating the bundle...
+Web based installer created at P:\TDDWorkflow\matlab\TddMatlabHelper\for_redistribution\TDDMatlabHelper_web.exe.
+Packaging complete.
+Elapsed packaging time was: 49 seconds.

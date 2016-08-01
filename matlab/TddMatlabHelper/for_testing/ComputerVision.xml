@@ -1,0 +1,861 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ComputerVision</name>
+    </assembly>
+    <members>
+        <member name="T:LiongStudio.ComputerVision.Tdd">
+            <summary>
+            The Tdd class provides a CLS compliant, MWArray interface to the MATLAB functions
+            contained in the files:
+            <newpara></newpara>
+            P:\TDDWorkflow\matlab\ExtractFisherVector.m
+            <newpara></newpara>
+            P:\TDDWorkflow\matlab\ExtractTddFeature.m
+            <newpara></newpara>
+            P:\TDDWorkflow\matlab\GenerateGmm.m
+            <newpara></newpara>
+            P:\TDDWorkflow\matlab\GeneratePca.m
+            <newpara></newpara>
+            P:\TDDWorkflow\matlab\GetVideoFrameCount.m
+            </summary>
+            <remarks>
+            @Version 0.0
+            </remarks>
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.#cctor">
+            <summary internal= "true">
+            The static constructor instantiates and initializes the MATLAB Runtime instance.
+            </summary>
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.#ctor">
+            <summary>
+            Constructs a new instance of the Tdd class.
+            </summary>
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.Finalize">
+            <summary internal= "true">
+            Class destructor called by the CLR garbage collector.
+            </summary>
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.Dispose">
+            <summary>
+            Frees the native resources associated with this object
+            </summary>
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.Dispose(System.Boolean)">
+            <summary internal= "true">
+            Internal dispose function
+            </summary>
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector">
+             <summary>
+             Provides a void output, 0-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 1-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="pcaPath1">Input argument #1</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 2-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 3-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 4-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 5-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <param name="inputDir">Input argument #5</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 6-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <param name="inputDir">Input argument #5</param>
+             <param name="inputFileNameWithoutExtensionNorm1">Input argument #6</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 7-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <param name="inputDir">Input argument #5</param>
+             <param name="inputFileNameWithoutExtensionNorm1">Input argument #6</param>
+             <param name="inputFileNameWithoutExtensionNorm2">Input argument #7</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 8-input MWArrayinterface to the ExtractFisherVector
+             MATLAB function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <param name="inputDir">Input argument #5</param>
+             <param name="inputFileNameWithoutExtensionNorm1">Input argument #6</param>
+             <param name="inputFileNameWithoutExtensionNorm2">Input argument #7</param>
+             <param name="outputDir">Input argument #8</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32)">
+             <summary>
+             Provides the standard 0-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 1-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="pcaPath1">Input argument #1</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 2-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 3-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 4-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 5-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <param name="inputDir">Input argument #5</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 6-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <param name="inputDir">Input argument #5</param>
+             <param name="inputFileNameWithoutExtensionNorm1">Input argument #6</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 7-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <param name="inputDir">Input argument #5</param>
+             <param name="inputFileNameWithoutExtensionNorm1">Input argument #6</param>
+             <param name="inputFileNameWithoutExtensionNorm2">Input argument #7</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractFisherVector(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 8-input MWArray interface to the ExtractFisherVector MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             Number of feature held.
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="pcaPath1">Input argument #1</param>
+             <param name="pcaPath2">Input argument #2</param>
+             <param name="gmmPath1">Input argument #3</param>
+             <param name="gmmPath2">Input argument #4</param>
+             <param name="inputDir">Input argument #5</param>
+             <param name="inputFileNameWithoutExtensionNorm1">Input argument #6</param>
+             <param name="inputFileNameWithoutExtensionNorm2">Input argument #7</param>
+             <param name="outputDir">Input argument #8</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature">
+             <summary>
+             Provides a void output, 0-input MWArrayinterface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 1-input MWArrayinterface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="envPath">Input argument #1</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 2-input MWArrayinterface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 3-input MWArrayinterface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <param name="inputFileNameWithoutExtension">Input argument #3</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 4-input MWArrayinterface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <param name="inputFileNameWithoutExtension">Input argument #3</param>
+             <param name="outputDir">Input argument #4</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 5-input MWArrayinterface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <param name="inputFileNameWithoutExtension">Input argument #3</param>
+             <param name="outputDir">Input argument #4</param>
+             <param name="scale">Input argument #5</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 6-input MWArrayinterface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <param name="inputFileNameWithoutExtension">Input argument #3</param>
+             <param name="outputDir">Input argument #4</param>
+             <param name="scale">Input argument #5</param>
+             <param name="gpuId">Input argument #6</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(System.Int32)">
+             <summary>
+             Provides the standard 0-input MWArray interface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 1-input MWArray interface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="envPath">Input argument #1</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 2-input MWArray interface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 3-input MWArray interface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <param name="inputFileNameWithoutExtension">Input argument #3</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 4-input MWArray interface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <param name="inputFileNameWithoutExtension">Input argument #3</param>
+             <param name="outputDir">Input argument #4</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 5-input MWArray interface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <param name="inputFileNameWithoutExtension">Input argument #3</param>
+             <param name="outputDir">Input argument #4</param>
+             <param name="scale">Input argument #5</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.ExtractTddFeature(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 6-input MWArray interface to the ExtractTddFeature MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="envPath">Input argument #1</param>
+             <param name="inputDir">Input argument #2</param>
+             <param name="inputFileNameWithoutExtension">Input argument #3</param>
+             <param name="outputDir">Input argument #4</param>
+             <param name="scale">Input argument #5</param>
+             <param name="gpuId">Input argument #6</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm">
+             <summary>
+             Provides a void output, 0-input MWArrayinterface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 1-input MWArrayinterface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="inputFilePaths">Input argument #1</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 2-input MWArrayinterface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="pcaFilePath">Input argument #2</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 3-input MWArrayinterface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="pcaFilePath">Input argument #2</param>
+             <param name="outputFileName">Input argument #3</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 4-input MWArrayinterface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="pcaFilePath">Input argument #2</param>
+             <param name="outputFileName">Input argument #3</param>
+             <param name="outputFileDir">Input argument #4</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(System.Int32)">
+             <summary>
+             Provides the standard 0-input MWArray interface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 1-input MWArray interface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="inputFilePaths">Input argument #1</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 2-input MWArray interface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="pcaFilePath">Input argument #2</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 3-input MWArray interface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="pcaFilePath">Input argument #2</param>
+             <param name="outputFileName">Input argument #3</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GenerateGmm(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 4-input MWArray interface to the GenerateGmm MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="pcaFilePath">Input argument #2</param>
+             <param name="outputFileName">Input argument #3</param>
+             <param name="outputFileDir">Input argument #4</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GeneratePca">
+             <summary>
+             Provides a void output, 0-input MWArrayinterface to the GeneratePca MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GeneratePca(MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 1-input MWArrayinterface to the GeneratePca MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="inputFilePaths">Input argument #1</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GeneratePca(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 2-input MWArrayinterface to the GeneratePca MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="outputFileName">Input argument #2</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GeneratePca(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a void output, 3-input MWArrayinterface to the GeneratePca MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="outputFileName">Input argument #2</param>
+             <param name="outputFileDir">Input argument #3</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GeneratePca(System.Int32)">
+             <summary>
+             Provides the standard 0-input MWArray interface to the GeneratePca MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GeneratePca(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 1-input MWArray interface to the GeneratePca MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="inputFilePaths">Input argument #1</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GeneratePca(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 2-input MWArray interface to the GeneratePca MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="outputFileName">Input argument #2</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GeneratePca(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 3-input MWArray interface to the GeneratePca MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="inputFilePaths">Input argument #1</param>
+             <param name="outputFileName">Input argument #2</param>
+             <param name="outputFileDir">Input argument #3</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GetVideoFrameCount">
+             <summary>
+             Provides a single output, 0-input MWArrayinterface to the GetVideoFrameCount
+             MATLAB function.
+             </summary>
+             <remarks>
+             </remarks>
+             <returns>An MWArray containing the first output argument.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GetVideoFrameCount(MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a single output, 1-input MWArrayinterface to the GetVideoFrameCount
+             MATLAB function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="fileName">Input argument #1</param>
+             <returns>An MWArray containing the first output argument.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GetVideoFrameCount(System.Int32)">
+             <summary>
+             Provides the standard 0-input MWArray interface to the GetVideoFrameCount MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GetVideoFrameCount(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 1-input MWArray interface to the GetVideoFrameCount MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="fileName">Input argument #1</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.GetVideoFrameCount(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray[]@,MathWorks.MATLAB.NET.Arrays.MWArray[])">
+             <summary>
+             Provides an interface for the GetVideoFrameCount function in which the input and
+             output
+             arguments are specified as an array of MWArrays.
+             </summary>
+             <remarks>
+             This method will allocate and return by reference the output argument
+             array.<newpara></newpara>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return</param>
+             <param name= "argsOut">Array of MWArray output arguments</param>
+             <param name= "argsIn">Array of MWArray input arguments</param>
+            
+        </member>
+        <member name="M:LiongStudio.ComputerVision.Tdd.WaitForFiguresToDie">
+             <summary>
+             This method will cause a MATLAB figure window to behave as a modal dialog box.
+             The method will not return until all the figure windows associated with this
+             component have been closed.
+             </summary>
+             <remarks>
+             An application should only call this method when required to keep the
+             MATLAB figure window from disappearing.  Other techniques, such as calling
+             Console.ReadLine() from the application should be considered where
+             possible.</remarks>
+            
+        </member>
+    </members>
+</doc>

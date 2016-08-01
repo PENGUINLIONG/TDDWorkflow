@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
+using LiongStudio.ComputerVision.Utils;
 
 namespace CVBatchAvi
 {
@@ -14,45 +15,9 @@ namespace CVBatchAvi
 		static void IncreaseRefCount() { ++refCount; }
 		static void DecreaseRefCount() { if (--refCount <= 0) ShowExitPrompt(); }
 
-		static List<string> FindAllAvi(string dir, int depth)
-		{
-			List<string> rv = new List<string>();
-			if (depth <= 0) return rv;
-			
-			foreach (var file in Directory.GetFiles(dir))
-				if ((!Path.GetFileName(file).StartsWith("K_")) && (Path.GetExtension(file) == ".avi"))
-					rv.Add('\"' + file + '\"');
-			foreach (var subdir in Directory.GetDirectories(dir)) rv.AddRange(FindAllAvi(subdir, depth - 1));
-
-			return rv;
-		}
-
 		static void RunWorkflow(string dir, List<string> aviPaths)
 		{
-			var sw = Stopwatch.StartNew();
-			var wf = new Process();
-
-			try
-			{
-				wf.StartInfo.FileName = AppDomain.CurrentDomain.BaseDirectory + "CVWorkflow.exe";
-				wf.StartInfo.Arguments = string.Join(" ", aviPaths);
-				wf.StartInfo.CreateNoWindow = true;
-				wf.StartInfo.UseShellExecute = false;
-				wf.Start();
-				wf.WaitForExit();
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine("======= Exception occured =======");
-				Console.WriteLine(e.Message);
-				Console.WriteLine(e.StackTrace);
-			}
-			sw.Stop();
-			if (wf.ExitCode == 0)
-				Console.WriteLine("Finished a batch of " + aviPaths.Count + " files. Time elapsed: " + sw.ElapsedMilliseconds + "ms.");
-			else
-				Console.WriteLine("Some implicit error occured in DF/IT execution for directory \"" + dir + "\".");
-
+			SubprocedureLauncher.LaunchFor(AppDomain.CurrentDomain.BaseDirectory + "PreWorkflow.exe", aviPaths);
 			DecreaseRefCount();
 		}
 
@@ -65,6 +30,7 @@ namespace CVBatchAvi
 
 		static void Main(string[] args)
 		{
+			var searchDepth = 5;
 			Console.WriteLine("Batch work started, {0} batches will be despatched.", args.Length);
 			foreach(var dir in args)
 			{
@@ -72,7 +38,7 @@ namespace CVBatchAvi
 
 				Console.WriteLine("Despatching work for \"" + dir + "\".");
 				IncreaseRefCount();
-				RunWorkflowAsync(dir, FindAllAvi(dir, 5));
+				RunWorkflowAsync(dir, FileLocator.FindAllAvi(dir, searchDepth));
 			}
 			while (refCount > 0) Console.ReadKey(true);
 		}

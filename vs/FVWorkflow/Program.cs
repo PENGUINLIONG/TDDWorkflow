@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FVHelper;
+using LiongStudio.ComputerVision.Tdd;
 
 namespace FVWorkflow
 {
 	class Program
 	{
-		static FV _Fv;
+		static MatlabDelegate _Matlab = new MatlabDelegate();
 		static string[] _Suffix = new string[]
 		{
 			"scale3_s_c4_n1", "scale3_s_c4_n2",
@@ -41,7 +37,7 @@ namespace FVWorkflow
 				else if (!File.Exists(tdd2))
 					_Log.WriteLine("File missing: " + tdd2);
 				else
-					_Fv.ExtractFisherVector(_PcaDir + '\\' + suffix1 + ".mat", _PcaDir + '\\' + suffix2 + ".mat",
+					_Matlab.ExtractFisherVector(_PcaDir + '\\' + suffix1 + ".mat", _PcaDir + '\\' + suffix2 + ".mat",
 						_GmmDir + '\\' + suffix1 + ".mat", _GmmDir + '\\' + suffix2 + ".mat",
 						dir,
 						fileNameNoEx + '_' + suffix1, fileNameNoEx + '_' + suffix2,
@@ -51,9 +47,6 @@ namespace FVWorkflow
 
 		static int Main(string[] args)
 		{
-			args = new string[] { @"F:\Training Data\Video Dataset\UCF_SPORTS_11\ucf_sports_actions\ucf action\Golf-Swing-Front\001\7603-4_70159.avi" };
-			_Fv = new FV();
-
 			var envPath = AppDomain.CurrentDomain.BaseDirectory;
 			var logDir = envPath + @"Log";
 			_PcaDir = envPath + @"PCA";
@@ -76,7 +69,7 @@ namespace FVWorkflow
 			}
 			_Log.WriteLine("All done.");
 			_Log.Close();
-			_Fv.Dispose();
+			_Matlab.Dispose();
 			return 0;
 		}
 	}

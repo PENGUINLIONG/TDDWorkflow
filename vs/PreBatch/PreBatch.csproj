@@ -67,6 +67,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TDDWorkflowHelper\TDDWorkflowHelper.csproj">
+      <Project>{c7425454-2ed7-4606-be0d-a67cdfdc799b}</Project>
+      <Name>TDDWorkflowHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
