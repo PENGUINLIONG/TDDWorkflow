@@ -132,13 +132,14 @@ namespace Validator
 
 		static void Main(string[] args)
 		{
+			args = new string[]{@"F:\Training Data\Video Dataset\UCF_SPORTS_11\ucf_sports_actions\ucf action\Golf-Swing-Side"};
 			_Matlab = new MatlabDelegate();
 			_Log = new CVLogger();
 
 			foreach (var dir in args)
 			{
 				_Log.WriteLine(">>> Searching in directory: " + dir);
-				foreach (var fileName in FileLocator.FindAllAvi(dir, 5))
+				foreach (var fileName in FileLocator.FindAllAvi(dir, 5, false))
 				{
 					_Log.WriteLine(">>> Validating the results of file: " + fileName);
 

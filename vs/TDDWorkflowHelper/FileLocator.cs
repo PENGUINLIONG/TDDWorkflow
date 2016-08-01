@@ -22,13 +22,13 @@ namespace LiongStudio.ComputerVision.Utils
 			if (searchRoot == null) throw new ArgumentNullException("$searchRoot is null.");
 
 			List<string> rv = new List<string>();
-			if (depth <= 0) return rv;
+			if (depth == 0) return rv;
 			
 			foreach (var file in Directory.GetFiles(searchRoot))
 				// The commented part is used to omit depth vids from Kinect.
 				if (/*(!Path.GetFileName(file).StartsWith("K_")) && */(Path.GetExtension(file) == ".avi"))
 					rv.Add(shouldQuoteResult ? '\"' + file + '\"' : file);
-			foreach (var subdir in Directory.GetDirectories(searchRoot)) rv.AddRange(FindAllAvi(subdir, depth - 1));
+			foreach (var subdir in Directory.GetDirectories(searchRoot)) rv.AddRange(FindAllAvi(subdir, depth - 1, shouldQuoteResult));
 
 			return rv;
 		}
