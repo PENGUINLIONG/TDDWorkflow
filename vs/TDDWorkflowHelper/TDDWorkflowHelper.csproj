@@ -28,7 +28,7 @@
   <ItemGroup>
     <Reference Include="MWArray, Version=2.15.1.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program files\MATLAB\R2015b\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll</HintPath>
+      <HintPath>S:\MATLAB\R2015b\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
