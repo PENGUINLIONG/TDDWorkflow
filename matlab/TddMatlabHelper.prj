@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3757233095" file="P:\TDDWorkflow\matlab\TddMatlabHelper.prj" location="P:\TDDWorkflow\matlab" name="TddMatlabHelper" preferred-package-location="P:\TDDWorkflow\matlab\TddMatlabHelper\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.library" target-name="Library Compiler">
+  <configuration build-checksum="2268836161" file="P:\TDDWorkflow\matlab\TddMatlabHelper.prj" location="P:\TDDWorkflow\matlab" name="TddMatlabHelper" preferred-package-location="P:\TDDWorkflow\matlab\TddMatlabHelper\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.library" target-name="Library Compiler">
     <param.appname>TddMatlabHelper</param.appname>
     <param.icon />
     <param.icons />

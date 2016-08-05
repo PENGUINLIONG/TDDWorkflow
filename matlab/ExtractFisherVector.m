@@ -25,7 +25,7 @@ if ~isempty(feature1)
     feature1 = PCA.U(:,1:dim1)' * feature1;
     % Equals to: $feature ./ sqrt($PCA.vars(1:dim1)) (binary)
     feature1 = bsxfun(@rdivide,feature1,sqrt(PCA.vars(1:dim1)));
-    coding1 = vl_fisher(feature1,GMM.means,GMM.covariances,GMM.priors);
+    coding1 = vl_fisher(feature1,GMM.means,GMM.covariances,GMM.priors,'Normalized');
 else
     % $feature is empty, skip this feature set.
     coding1 = [];
@@ -51,7 +51,7 @@ if ~isempty(feature2)
     feature2 = PCA.U(:,1:dim1)' * feature2;
     % Equals to: $feature ./ sqrt($PCA.vars(1:dim1)) (binary)
     feature2 = bsxfun(@rdivide,feature2,sqrt(PCA.vars(1:dim1)));
-    coding2 = vl_fisher(feature2,GMM.means,GMM.covariances,GMM.priors);
+    coding2 = vl_fisher(feature2,GMM.means,GMM.covariances,GMM.priors,'Normalized');
 else
     % $feature is empty, skip this feature set.
     coding2 = [];
